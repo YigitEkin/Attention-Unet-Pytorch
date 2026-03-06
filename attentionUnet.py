@@ -16,7 +16,7 @@ class Attention_UNet(nn.Module):
         self.n_classes = n_classes
         self.bilinear = bilinear
 
-        self.inc = (DoubleConv(n_classes, middle_layers[0]))
+        self.inc = (DoubleConv(n_channels, middle_layers[0]))
         self.down1 = (Down(middle_layers[0], middle_layers[1]))
         self.down2 = (Down(middle_layers[1], middle_layers[2]))
         self.down3 = (Down(middle_layers[2], middle_layers[3]))
